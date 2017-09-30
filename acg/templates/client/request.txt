@@ -1,0 +1,5 @@
+{class}.{endpoint} = staticmethod(
+    lambda params=None: getattr(
+        requests, '{http_method}'
+    )(url='{url}', params=params)
+)

@@ -1,0 +1,25 @@
+"""
+Setup.
+"""
+from setuptools import setup
+
+
+setup(
+    author="{author}",
+    classifiers=[
+        'Topic :: Software Development :: Libraries',
+
+        'License :: OSI Approved :: MIT License',
+
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+    ],
+    install_requires=[
+        "requests>=2.18.4",
+    ],
+    license="MIT",
+    name="{package_name}",
+    packages=["{package_name}"],
+    version="{version}",
+)

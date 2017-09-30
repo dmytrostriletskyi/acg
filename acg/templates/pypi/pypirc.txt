@@ -1,0 +1,3 @@
+[pypi]
+username = {username}
+password = {password}

@@ -50,7 +50,7 @@ Using ACG:
 from google_api import google_api_client
 
 
-create_jon_snow_user = google_api_client.user.post({
+create_jon_snow_user = google_api_client.user.create({
     'id': 7,
     'name': 'Jon',
     'surname': Snow
@@ -87,15 +87,17 @@ acg:
 
     user.castle:
       url: /user/castle
-      endpoints: create:get
+      endpoints: create:post
 ```
 
-Why it need `PyPi` credentials? Because after you finish your configurations and type `acg` 
-to terminal (after installation a `acg` package of course) it will deploy your API client to the 
-`Python Package Index` to account based on credentials.
+Why it need `PyPi` credentials? `acg` deploy your API client to the `Python Package Index` to account based on credentials.
 
 Then you will be able to install your API client with pip - `pip install {name}`.
 `{name}` is the first point in `acg` cause in configuration file (in example it is `google_api`).
+
+* if you finished configuring a file, type `acg` to terminal (after installation a `acg` package of course).
+* remember to up version in configuration file if you edit it and want to update API client.
+* you can use any `HTTP-methods` and put any data to it, because `acg` based on `requests` library.
 
 After all of that you can import API client to code:
 
@@ -109,8 +111,6 @@ If you called your package as `Hello`, you are able import client following next
 ```python
 from Hello import Hello_client
 ```
-
-Also you can use any `HTTP-methods` and put any data to it, because `acg` based on `requests` library.
 
 ## Install
 

@@ -58,7 +58,6 @@ create_jon_snow_user = google_api_client.user.create({
 
 get_jon_snow_user = google_api_client.user.get({'id': 7})
 
-
 create_jon_snow_castle = google_api_client.user.castle.create({
     'id': 7,
     'castle': 'Winterfell',
@@ -98,6 +97,8 @@ Then you will be able to install your API client with pip - `pip install {name}`
 * if you finished configuring a file, type `acg` to terminal (after installation a `acg` package of course).
 * remember to up version in configuration file if you edit it and want to update API client.
 * you can use any `HTTP-methods` and put any data to it, because `acg` based on `requests` library.
+* endpoints needs to be separated by comma.
+* one endpoint's cause contains end of client sequence and `http-method` type (e.g. `create:post`).
 
 After all of that you can import API client to code:
 
